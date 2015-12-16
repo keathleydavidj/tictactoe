@@ -29,8 +29,8 @@ $(document).ready(function() {
                 $(this).addClass('X-play');
                 $(this).html("X");
 
-                checkDraw();
                 checkWin();
+                checkDraw();
 
             } else {
                 alert("That square has already been played. Please choose another square");
@@ -47,8 +47,9 @@ $(document).ready(function() {
                 $(this).addClass('O-play');
                 $(this).html("O");
 
-                checkDraw();
                 checkWin();
+                checkDraw();
+                
 
             } else {
                 alert("That square has already been played. Please choose another square");
