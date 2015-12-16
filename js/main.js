@@ -17,6 +17,7 @@ $(document).ready(function() {
 
     $('.gm-piece').on('click', function() {
         turn++;
+        console.log(turn);
         if (turn % 2 != 0) {
 
 
@@ -58,12 +59,12 @@ $(document).ready(function() {
 
     function validatePlay(squareplayed) {
         playValid = true;
-        // if ($(squareplayed).hasClass('free')) {
-        //     playValid = true;
-        // } else {
-        //     playValid = false;
-        //     return false;
-        // }
+        if ($(squareplayed).hasClass('free')) {
+            playValid = true;
+        } else {
+            playValid = false;
+            turn--;
+        }
     }
 
     function clearBoard() {
