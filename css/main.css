@@ -40,50 +40,50 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-#btn0{
+#btn1{
   position: absolute;
   display: flex;
   top: 150px;
   left: 150px;
 }
-#btn1{
+#btn2{
   top: 150px;
   left: 433px;
   position: absolute;
 }
-#btn2{
+#btn3{
   position: absolute;
   top: 150px;
   left: 720px;
-}
-#btn3{
-  position: absolute;
-  top: 450px;
-  left: 150px;
 }
 #btn4{
   position: absolute;
   top: 450px;
-  left: 433px;
+  left: 150px;
 }
 #btn5{
   position: absolute;
   top: 450px;
-  left: 720px;
+  left: 433px;
 }
 #btn6{
-
   position: absolute;
-  top: 720px;
-  left: 150px;
+  top: 450px;
+  left: 720px;
 }
 #btn7{
 
   position: absolute;
   top: 720px;
-  left: 433px;
+  left: 150px;
 }
 #btn8{
+
+  position: absolute;
+  top: 720px;
+  left: 433px;
+}
+#btn9{
 
   position: absolute;
   top: 720px;
