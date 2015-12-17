@@ -27,7 +27,7 @@ $(document).ready(function() {
                 $(this).removeClass('free');
                 $(this).addClass('played');
                 $(this).addClass('X-play');
-                $(this).html("X");
+                $(this).html('<img class="img-responsive token" src="images/x-token.png">');
 
                 checkWin();
                 checkDraw();
@@ -45,7 +45,7 @@ $(document).ready(function() {
                 $(this).removeClass('free');
                 $(this).addClass('played');
                 $(this).addClass('O-play');
-                $(this).html("O");
+                $(this).html('<img class="img-responsive token" src="images/o-token.svg">');
 
                 checkWin();
                 checkDraw();

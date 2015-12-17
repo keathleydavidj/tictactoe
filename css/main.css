@@ -1,91 +1,87 @@
 body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #eee;
-  background-image: url(../images/hash.png);
-  background-repeat: no-repeat;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
 }
 
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
+.gm-space {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
 }
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
-}
-.form-signin .checkbox {
-  font-weight: normal;
-}
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-#btn1{
-  position: absolute;
-  display: flex;
-  top: 150px;
-  left: 150px;
-}
-#btn2{
-  top: 150px;
-  left: 433px;
-  position: absolute;
-}
-#btn3{
-  position: absolute;
-  top: 150px;
-  left: 720px;
-}
-#btn4{
-  position: absolute;
-  top: 450px;
-  left: 150px;
-}
-#btn5{
-  position: absolute;
-  top: 450px;
-  left: 433px;
-}
-#btn6{
-  position: absolute;
-  top: 450px;
-  left: 720px;
-}
-#btn7{
 
-  position: absolute;
-  top: 720px;
-  left: 150px;
+.gm-piece {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
-#btn8{
 
-  position: absolute;
-  top: 720px;
-  left: 433px;
+.token {
+    max-width: 100%;
+    max-height: 100%;
 }
-#btn9{
 
-  position: absolute;
-  top: 720px;
-  left: 720px;
+#div1 {
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+#div2 {
+    border-right: solid black;
+    border-bottom: solid black;
+    border-left: solid black;
+}
+
+#div3 {
+    border-left: solid black;
+    border-bottom: solid black;
+}
+
+#div4 {
+    border-right: solid black;
+    border-bottom: solid black;
+    border-top: solid black;
+}
+
+#div5 {
+    border: solid black;
+}
+
+#div6 {
+    border-top: solid black;
+    border-left: solid black;
+    border-bottom: solid black;
+}
+
+#div7 {
+    border-right: solid black;
+    border-top: solid black;
+}
+
+#div8 {
+    border-right: solid black;
+    border-top: solid black;
+    border-left: solid black;
+}
+
+#div9 {
+    border-left: solid black;
+    border-top: solid black;
+}
+
+
+/*.token {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+.gameboard {
+    max-width: 900px;
+    min-width: 480px;
 }
