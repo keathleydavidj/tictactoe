@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
-    var sq1 = $('#btn1');
-    var sq2 = $('#btn2');
-    var sq3 = $('#btn3');
-    var sq4 = $('#btn4');
-    var sq5 = $('#btn5');
-    var sq6 = $('#btn6');
-    var sq7 = $('#btn7');
-    var sq8 = $('#btn8');
-    var sq9 = $('#btn9');
+    var btn1 = $('#btn1');
+    var btn2 = $('#btn2');
+    var btn3 = $('#btn3');
+    var btn4 = $('#btn4');
+    var btn5 = $('#btn5');
+    var btn6 = $('#btn6');
+    var btn7 = $('#btn7');
+    var btn8 = $('#btn8');
+    var btn9 = $('#btn9');
 
     var playValid = false;
     var win = false;
@@ -17,7 +17,6 @@ $(document).ready(function() {
 
     $('.gm-piece').on('click', function() {
         turn++;
-        console.log(turn);
         if (turn % 2 != 0) {
 
 
@@ -33,7 +32,8 @@ $(document).ready(function() {
                 checkDraw();
 
             } else {
-                alert("That square has already been played. Please choose another square");
+                $(".gameboard").effect("shake");
+                // alert("That square has already been played. Please choose another square");
             }
 
         } else {
@@ -52,7 +52,8 @@ $(document).ready(function() {
                 
 
             } else {
-                alert("That square has already been played. Please choose another square");
+                $(".gameboard").effect("shake");
+                // alert("That square has already been played. Please choose another square");
             }
 
         }
@@ -81,46 +82,50 @@ $(document).ready(function() {
         win = true;
 
         if (player == "X") {
-            alert("Player X wins!")
+            // alert("Player X wins!")
+            $('#xWinModal').modal('show'); 
+            // BootstrapDialog.alert('Hi Apple!');
+        
         } else {
-            alert("Player O wins!")
+            // alert("Player O wins!")
+            $('#oWinModal').modal('show'); 
         }
         clearBoard();
     }
 
     function checkWin() {
 
-        if (sq1.hasClass('X-play') && sq2.hasClass('X-play') && sq3.hasClass('X-play')) {
+        if (btn1.hasClass('X-play') && btn2.hasClass('X-play') && btn3.hasClass('X-play')) {
             winAlert("X");
-        } else if (sq1.hasClass('O-play') && sq2.hasClass('O-play') && sq3.hasClass('O-play')) {
+        } else if (btn1.hasClass('O-play') && btn2.hasClass('O-play') && btn3.hasClass('O-play')) {
             winAlert("O");
-        } else if (sq4.hasClass('X-play') && sq5.hasClass('X-play') && sq6.hasClass('X-play')) {
+        } else if (btn4.hasClass('X-play') && btn5.hasClass('X-play') && btn6.hasClass('X-play')) {
             winAlert("X");
-        } else if (sq4.hasClass('O-play') && sq5.hasClass('O-play') && sq6.hasClass('O-play')) {
+        } else if (btn4.hasClass('O-play') && btn5.hasClass('O-play') && btn6.hasClass('O-play')) {
             winAlert("O");
-        } else if (sq7.hasClass('X-play') && sq8.hasClass('X-play') && sq9.hasClass('X-play')) {
+        } else if (btn7.hasClass('X-play') && btn8.hasClass('X-play') && btn9.hasClass('X-play')) {
             winAlert("X");
-        } else if (sq7.hasClass('O-play') && sq8.hasClass('O-play') && sq9.hasClass('O-play')) {
+        } else if (btn7.hasClass('O-play') && btn8.hasClass('O-play') && btn9.hasClass('O-play')) {
             winAlert("O");
-        } else if (sq1.hasClass('X-play') && sq4.hasClass('X-play') && sq7.hasClass('X-play')) {
+        } else if (btn1.hasClass('X-play') && btn4.hasClass('X-play') && btn7.hasClass('X-play')) {
             winAlert("X");
-        } else if (sq1.hasClass('O-play') && sq4.hasClass('O-play') && sq7.hasClass('O-play')) {
+        } else if (btn1.hasClass('O-play') && btn4.hasClass('O-play') && btn7.hasClass('O-play')) {
             winAlert("O");
-        } else if (sq5.hasClass('X-play') && sq2.hasClass('X-play') && sq8.hasClass('X-play')) {
+        } else if (btn5.hasClass('X-play') && btn2.hasClass('X-play') && btn8.hasClass('X-play')) {
             winAlert("X");
-        } else if (sq5.hasClass('O-play') && sq2.hasClass('O-play') && sq8.hasClass('O-play')) {
+        } else if (btn5.hasClass('O-play') && btn2.hasClass('O-play') && btn8.hasClass('O-play')) {
             winAlert("O");
-        } else if (sq6.hasClass('X-play') && sq9.hasClass('X-play') && sq3.hasClass('X-play')) {
+        } else if (btn6.hasClass('X-play') && btn9.hasClass('X-play') && btn3.hasClass('X-play')) {
             winAlert("X");
-        } else if (sq6.hasClass('O-play') && sq9.hasClass('O-play') && sq3.hasClass('O-play')) {
+        } else if (btn6.hasClass('O-play') && btn9.hasClass('O-play') && btn3.hasClass('O-play')) {
             winAlert("O");
-        } else if (sq1.hasClass('X-play') && sq5.hasClass('X-play') && sq9.hasClass('X-play')) {
+        } else if (btn1.hasClass('X-play') && btn5.hasClass('X-play') && btn9.hasClass('X-play')) {
             winAlert("X");
-        } else if (sq1.hasClass('O-play') && sq5.hasClass('O-play') && sq9.hasClass('O-play')) {
+        } else if (btn1.hasClass('O-play') && btn5.hasClass('O-play') && btn9.hasClass('O-play')) {
             winAlert("O");
-        } else if (sq5.hasClass('X-play') && sq7.hasClass('X-play') && sq3.hasClass('X-play')) {
+        } else if (btn5.hasClass('X-play') && btn7.hasClass('X-play') && btn3.hasClass('X-play')) {
             winAlert("X");
-        } else if (sq5.hasClass('O-play') && sq7.hasClass('O-play') && sq3.hasClass('O-play')) {
+        } else if (btn5.hasClass('O-play') && btn7.hasClass('O-play') && btn3.hasClass('O-play')) {
             winAlert("O");
         }
     }
@@ -128,7 +133,8 @@ $(document).ready(function() {
     function checkDraw() {
 
         if (!($('.gm-piece').hasClass('free'))) {
-            alert("Draw! Try playing again!");
+            // alert("Draw! Try playing again!");
+            $('#drawModal').modal('show'); 
             clearBoard();
         }
     }

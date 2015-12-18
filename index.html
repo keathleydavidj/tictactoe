@@ -5,78 +5,141 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="images/favicon.ico">
     <title>Tic-Tac-Toe</title>
-    <link rel="stylesheet" href="elusive-icons-2.0.0/css/elusive-icons.min.css">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container col-xs-12 col-md-12">
-        <div class="gameboard well">
-            <div class="row">
-                <div id="div1" class="col-xs-4 col-md-4">
-                <div class="gm-space">
-                    <div id="btn1" class="gm-piece free"></div>
+    <div class="container">
+        <div class="header clearfix">
+            <h1 class="text-muted">Tic-Tac-Toe</h1>
+        </div>
+        <div class="container col-xs-12 col-md-12">
+            <div class="gameboard container">
+                <div class="row">
+                    <div id="div1" class="col-xs-4 col-md-4">
+                        <div class="gm-space">
+                            <div id="btn1" class="gm-piece free">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="div2" class="col-xs-4 col-md-4">
+                        <div class="gm-space">
+                            <div id="btn2" class="gm-piece free">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="div3" class="col-xs-4 col-md-4">
+                        <div class="gm-space">
+                            <div id="btn3" class="gm-piece free">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id="div2" class="col-xs-4 col-md-4">
-                <div class="gm-space">
-                    <div id="btn2" class="gm-piece free"></div>
-                </div></div>
-                <div id="div3" class="col-xs-4 col-md-4">
-                    <div class="gm-space">
-                    <div id="btn3" class="gm-piece free"></div>
-                </div></div>
-            </div>
-            <div class="row">
-                <div id="div4" class="col-xs-4 col-md-4">
-                    <div class="gm-space">
-                    <div id="btn4" class="gm-piece free"></div>
-                </div></div>
-                <div id="div5" class="col-xs-4 col-md-4">
-                    <div class="gm-space">
-                    <div id="btn5" class="gm-piece free"></div>
-                </div></div>
-                <div id="div6" class="col-xs-4 col-md-4">
-                    <div class="gm-space">
-                    <div id="btn6" class="gm-piece free"></div>
-                </div></div>
-            </div>
-            <div class="row">
-                <div id="div7" class="col-xs-4 col-md-4">
-                    <div class="gm-space">
-                    <div id="btn7" class="gm-piece free"></div>
-                </div></div>
-                <div id="div8" class="col-xs-4 col-md-4">
-                    <div class="gm-space">
-                    <div id="btn8" class="gm-piece free"></div>
-                </div></div>
-                <div id="div9" class="col-xs-4 col-md-4">
-                    <div class="gm-space">
-                    <div id="btn9" class="gm-piece free"></div>
-                </div></div>
-            </div>
-            <div class="row">
-                <div class="col-md-5">
+                <div class="row">
+                    <div id="div4" class="col-xs-4 col-md-4">
+                        <div class="gm-space">
+                            <div id="btn4" class="gm-piece free">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="div5" class="col-xs-4 col-md-4">
+                        <div class="gm-space">
+                            <div id="btn5" class="gm-piece free">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="div6" class="col-xs-4 col-md-4">
+                        <div class="gm-space">
+                            <div id="btn6" class="gm-piece free">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-2">
-                    <button id="reset-btn" class="btn btn-default btn-lg">RESET</button>
+                <div class="row">
+                    <div id="div7" class="col-xs-4 col-md-4">
+                        <div class="gm-space">
+                            <div id="btn7" class="gm-piece free">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="div8" class="col-xs-4 col-md-4">
+                        <div class="gm-space">
+                            <div id="btn8" class="gm-piece free">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="div9" class="col-xs-4 col-md-4">
+                        <div class="gm-space">
+                            <div id="btn9" class="gm-piece free">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-5">
+                    </div>
+                    <div class="col-xs-2">
+                        <button id="reset-btn" class="btn btn-default btn-lg">RESET</button>
+                    </div>
+                    <div class="col-xs-5">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="xWinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Winner!</h4>
+                </div>
+                <div class="modal-body">
+                    <p> Player X wins! </p>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="modal fade" id="oWinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Winner!</h4>
+                </div>
+                <div class="modal-body">
+                    <p> Player O wins! </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="drawModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Draw!</h4>
+                </div>
+                <div class="modal-body">
+                    <h2> No one is a winner. You should feel bad. </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- // <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script>
-    window.jQuery || documentt.write('<script src="js/jquery.min.js"><\/script>')
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     </script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
