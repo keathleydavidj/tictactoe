@@ -1,4 +1,4 @@
-# ![](http://djkproj1.bitballoon.com/) Project #1: Tic-tac-toe
+# Project #1: Tic-tac-toe
 
 ### Technologies used:
 * HTML
@@ -9,4 +9,5 @@
 * Used DOM manipulation to get and set game states
 * Set up event listeners to get players moves
 
-
+### Hosted site:
+* http://djkproj1.bitballoon.com/
