@@ -19,83 +19,64 @@
         <div class="header clearfix">
             <h1 class="text-muted">Tic-Tac-Toe</h1>
         </div>
-        <div class="container col-xs-12 col-md-12">
-            <div class="gameboard container">
-                <div class="row">
-                    <div id="div1" class="col-xs-4 col-md-4">
-                        <div class="gm-space">
-                            <div id="btn1" class="gm-piece free">
-                            </div>
-                        </div>
+        <div class="row">
+            <div class="container col-xs-3 col-md-3"></div>
+            <div class="container gameboard col-xs-6 col-md-6">
+                <div class="row gamerow">
+                    <div id="btn1" class="col-xs-4 col-md-4 gm-piece free">
                     </div>
-                    <div id="div2" class="col-xs-4 col-md-4">
-                        <div class="gm-space">
-                            <div id="btn2" class="gm-piece free">
-                            </div>
-                        </div>
+                    <div id="btn2" class="col-xs-4 col-md-4 gm-piece free">
                     </div>
-                    <div id="div3" class="col-xs-4 col-md-4">
-                        <div class="gm-space">
-                            <div id="btn3" class="gm-piece free">
-                            </div>
-                        </div>
+                    <div id="btn3" class="col-xs-4 col-md-4 gm-piece free">
                     </div>
                 </div>
-                <div class="row">
-                    <div id="div4" class="col-xs-4 col-md-4">
-                        <div class="gm-space">
-                            <div id="btn4" class="gm-piece free">
-                            </div>
-                        </div>
+                <div class="row gamerow">
+                    <div id="btn4" class="col-xs-4 col-md-4 gm-piece free">
                     </div>
-                    <div id="div5" class="col-xs-4 col-md-4">
-                        <div class="gm-space">
-                            <div id="btn5" class="gm-piece free">
-                            </div>
-                        </div>
+                    <div id="btn5" class="col-xs-4 col-md-4 gm-piece free">
                     </div>
-                    <div id="div6" class="col-xs-4 col-md-4">
-                        <div class="gm-space">
-                            <div id="btn6" class="gm-piece free">
-                            </div>
-                        </div>
+                    <div id="btn6" class="col-xs-4 col-md-4 gm-piece free">
                     </div>
                 </div>
-                <div class="row">
-                    <div id="div7" class="col-xs-4 col-md-4">
-                        <div class="gm-space">
-                            <div id="btn7" class="gm-piece free">
-                            </div>
-                        </div>
+                <div class="row gamerow">
+                    <div id="btn7" class="col-xs-4 col-md-4 gm-piece free">
                     </div>
-                    <div id="div8" class="col-xs-4 col-md-4">
-                        <div class="gm-space">
-                            <div id="btn8" class="gm-piece free">
-                            </div>
-                        </div>
+                    <div id="btn8" class="col-xs-4 col-md-4 gm-piece free">
                     </div>
-                    <div id="div9" class="col-xs-4 col-md-4">
-                        <div class="gm-space">
-                            <div id="btn9" class="gm-piece free">
-                            </div>
-                        </div>
+                    <div id="btn9" class="col-xs-4 col-md-4 gm-piece free">
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-5">
-                    </div>
-                    <div class="col-xs-2">
-                        <button id="reset-btn" class="btn btn-default btn-lg">RESET</button>
-                    </div>
-                    <div class="col-xs-5">
-                    </div>
+            <div class="container col-xs-3 col-md-3"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+                <div class="well">
+                    <table class="table">
+                        <tr>
+                            <th>Player</th>
+                            <th>Score</th>
+                        </tr>
+                        <tr>
+                            <td>X</td>
+                            <td id="x-score">0</td>
+                        </tr>
+                        <tr>
+                            <td>O</td>
+                            <td id="o-score">0</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <button id="instruct-btn" class="btn btn-default btn-lg" data-toggle="modal" data-target="#instructModal">Instructions</button>
+                    <button id="reset-btn" class="btn btn-default btn-lg">RESET</button>
                 </div>
             </div>
+            <div class="col-xs-3"></div>
         </div>
     </div>
-    <!-- Modal -->
+    <!-- Modals -->
     <div class="modal fade" id="xWinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -135,7 +116,24 @@
             </div>
         </div>
     </div>
-
+    <div class="modal fade" id="instructModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Instructions</h4>
+                </div>
+                <div class="modal-body">
+                    <h3> Seriously?!... Fine.</h3>
+                    <ul>
+                        <li>X goes first.</li>
+                        <li>Try to get 3 in a row; including diagonally.</li>
+                        <li>Don't be dumb.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script>

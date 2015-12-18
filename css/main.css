@@ -1,24 +1,18 @@
 body {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: #eee;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #A9BCD0;
 }
 
-.gm-space {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
+.well {
+    background-color: #D8DBE2;
 }
 
 .gm-piece {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    max-height: 200px;
+    height: 15vw;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .token {
@@ -27,23 +21,48 @@ body {
 }
 
 .gameboard {
-    max-width: 900px;
-    min-width: 240px;
-}
+    max-width: 600px;
+    max-height: 600px;
+/*    min-width: 240px;
+    min-height: 240px;
+*/}
 
 .header {
     text-align: center;
 }
 
-#div4, #div5, #div6, #div7, #div8, #div9 {
+#btn4,
+#btn5,
+#btn6,
+#btn7,
+#btn8,
+#btn9 {
     border-top: solid black;
 }
-#div1, #div2, #div3, #div4, #div5, #div6 {
+
+#btn1,
+#btn2,
+#btn3,
+#btn4,
+#btn5,
+#btn6 {
     border-bottom: solid black;
 }
-#div1, #div2, #div4, #div5, #div7, #div8{
+
+#btn1,
+#btn2,
+#btn4,
+#btn5,
+#btn7,
+#btn8 {
     border-right: solid black;
 }
-#div2, #div3, #div5, #div6, #div8, #div9{
+
+#btn2,
+#btn3,
+#btn5,
+#btn6,
+#btn8,
+#btn9 {
     border-left: solid black;
 }

@@ -13,7 +13,8 @@ $(document).ready(function() {
     var playValid = false;
     var win = false;
     var turn = 0;
-
+    var xscore = 0;
+    var oscore = 0;
 
     $('.gm-piece').on('click', function() {
         turn++;
@@ -49,7 +50,7 @@ $(document).ready(function() {
 
                 checkWin();
                 checkDraw();
-                
+
 
             } else {
                 $(".gameboard").effect("shake");
@@ -82,13 +83,16 @@ $(document).ready(function() {
         win = true;
 
         if (player == "X") {
+            xscore++;
             // alert("Player X wins!")
-            $('#xWinModal').modal('show'); 
-            // BootstrapDialog.alert('Hi Apple!');
-        
+            $('#xWinModal').modal('show');
+            $('#x-score').html(xscore);
+
         } else {
+            oscore++;
             // alert("Player O wins!")
-            $('#oWinModal').modal('show'); 
+            $('#oWinModal').modal('show');
+            $('#o-score').html(oscore);
         }
         clearBoard();
     }
@@ -134,7 +138,7 @@ $(document).ready(function() {
 
         if (!($('.gm-piece').hasClass('free'))) {
             // alert("Draw! Try playing again!");
-            $('#drawModal').modal('show'); 
+            $('#drawModal').modal('show');
             clearBoard();
         }
     }
