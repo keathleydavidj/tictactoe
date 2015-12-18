@@ -15,6 +15,7 @@ $(document).ready(function() {
     var turn = 0;
     var xscore = 0;
     var oscore = 0;
+    var tie = 0;
 
     $('.gm-piece').on('click', function() {
         turn++;
@@ -137,7 +138,9 @@ $(document).ready(function() {
     function checkDraw() {
 
         if (!($('.gm-piece').hasClass('free'))) {
+            tie++;
             // alert("Draw! Try playing again!");
+            $('#tie').html(tie);
             $('#drawModal').modal('show');
             clearBoard();
         }
